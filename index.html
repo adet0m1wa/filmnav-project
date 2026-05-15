@@ -107,17 +107,17 @@
       letter-spacing: -0.01em;
       line-height: 1.4;
     }
-    .question > span {
+    .question > .question-text {
       text-wrap: pretty;
       display: inline-block;
       transform-origin: left center;
       transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
     }
-    .question[aria-expanded="true"] > span {
+    .question[aria-expanded="true"] > .question-text {
       transform: scale(1.025);
     }
     @media (hover: hover) and (pointer: fine) {
-      .faq-item:hover .question > span {
+      .faq-item:hover .question > .question-text {
         transform: scale(1.025);
       }
     }
@@ -240,7 +240,7 @@
     @media (prefers-reduced-motion: reduce) {
       .icon,
       .answer-wrap,
-      .question > span {
+      .question > .question-text {
         transition: none;
       }
       .faq-header,
@@ -274,7 +274,7 @@
     <div class="faq-list is-active" data-category="general">
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a1" id="q1">
-          <span>How do I submit a project to the platform?</span>
+          <span class="question-text">How do I submit a project to the platform?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a1" role="region" aria-labelledby="q1">
@@ -286,7 +286,7 @@
 
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a2" id="q2">
-          <span>What rights do producers retain?</span>
+          <span class="question-text">What rights do producers retain?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a2" role="region" aria-labelledby="q2">
@@ -298,7 +298,7 @@
 
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a3" id="q3">
-          <span>How does revenue sharing work?</span>
+          <span class="question-text">How does revenue sharing work?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a3" role="region" aria-labelledby="q3">
@@ -310,7 +310,7 @@
 
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a4" id="q4">
-          <span>What are the submission requirements?</span>
+          <span class="question-text">What are the submission requirements?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a4" role="region" aria-labelledby="q4">
@@ -322,7 +322,7 @@
 
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a5" id="q5">
-          <span>Can I withdraw a project after submission?</span>
+          <span class="question-text">Can I withdraw a project after submission?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a5" role="region" aria-labelledby="q5">
@@ -336,7 +336,7 @@
     <div class="faq-list" data-category="leaderboard">
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a-lead-1" id="q-lead-1">
-          <span>How is the leaderboard ranked?</span>
+          <span class="question-text">How is the leaderboard ranked?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a-lead-1" role="region" aria-labelledby="q-lead-1">
@@ -348,7 +348,7 @@
 
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a-lead-2" id="q-lead-2">
-          <span>How often does the leaderboard update?</span>
+          <span class="question-text">How often does the leaderboard update?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a-lead-2" role="region" aria-labelledby="q-lead-2">
@@ -360,7 +360,7 @@
 
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a-lead-3" id="q-lead-3">
-          <span>Can I see historical rankings?</span>
+          <span class="question-text">Can I see historical rankings?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a-lead-3" role="region" aria-labelledby="q-lead-3">
@@ -372,7 +372,7 @@
 
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a-lead-4" id="q-lead-4">
-          <span>What signals earn leaderboard points?</span>
+          <span class="question-text">What signals earn leaderboard points?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a-lead-4" role="region" aria-labelledby="q-lead-4">
@@ -384,7 +384,7 @@
 
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a-lead-5" id="q-lead-5">
-          <span>Do private projects affect my rank?</span>
+          <span class="question-text">Do private projects affect my rank?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a-lead-5" role="region" aria-labelledby="q-lead-5">
@@ -398,7 +398,7 @@
     <div class="faq-list" data-category="engagement">
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a-eng-1" id="q-eng-1">
-          <span>How is engagement measured?</span>
+          <span class="question-text">How is engagement measured?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a-eng-1" role="region" aria-labelledby="q-eng-1">
@@ -410,7 +410,7 @@
 
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a-eng-2" id="q-eng-2">
-          <span>Can I see who's engaging with my project?</span>
+          <span class="question-text">Can I see who's engaging with my project?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a-eng-2" role="region" aria-labelledby="q-eng-2">
@@ -422,7 +422,7 @@
 
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a-eng-3" id="q-eng-3">
-          <span>What counts as a meaningful engagement?</span>
+          <span class="question-text">What counts as a meaningful engagement?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a-eng-3" role="region" aria-labelledby="q-eng-3">
@@ -434,7 +434,7 @@
 
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a-eng-4" id="q-eng-4">
-          <span>Does engagement affect distribution priority?</span>
+          <span class="question-text">Does engagement affect distribution priority?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a-eng-4" role="region" aria-labelledby="q-eng-4">
@@ -446,7 +446,7 @@
 
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a-eng-5" id="q-eng-5">
-          <span>How can I boost engagement on a project?</span>
+          <span class="question-text">How can I boost engagement on a project?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a-eng-5" role="region" aria-labelledby="q-eng-5">
@@ -460,7 +460,7 @@
     <div class="faq-list" data-category="uploading">
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a-up-1" id="q-up-1">
-          <span>What file formats do you accept?</span>
+          <span class="question-text">What file formats do you accept?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a-up-1" role="region" aria-labelledby="q-up-1">
@@ -472,7 +472,7 @@
 
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a-up-2" id="q-up-2">
-          <span>Is there a file size limit?</span>
+          <span class="question-text">Is there a file size limit?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a-up-2" role="region" aria-labelledby="q-up-2">
@@ -484,7 +484,7 @@
 
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a-up-3" id="q-up-3">
-          <span>Can I upload multiple cuts of the same project?</span>
+          <span class="question-text">Can I upload multiple cuts of the same project?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a-up-3" role="region" aria-labelledby="q-up-3">
@@ -496,7 +496,7 @@
 
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a-up-4" id="q-up-4">
-          <span>How long does processing take?</span>
+          <span class="question-text">How long does processing take?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a-up-4" role="region" aria-labelledby="q-up-4">
@@ -508,7 +508,7 @@
 
       <div class="faq-item">
         <button class="question" aria-expanded="false" aria-controls="a-up-5" id="q-up-5">
-          <span>Can I replace an uploaded file later?</span>
+          <span class="question-text">Can I replace an uploaded file later?</span>
           <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="answer-wrap" id="a-up-5" role="region" aria-labelledby="q-up-5">
